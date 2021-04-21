@@ -20,18 +20,60 @@ header {
   -ms-grid-column: 1;
   grid-area: localisation;
   background-color: grey;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 #introduction {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
   grid-area: introduction;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #fonctionnement {
   -ms-grid-row: 4;
   -ms-grid-column: 1;
   grid-area: fonctionnement;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 20px;
+}
+
+.fonctionnement_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  background-color: #fdc1fd;
+  border: solid 1px black;
+  border-radius: 10px;
 }
 
 #restaurants {
@@ -86,5 +128,22 @@ footer {
   -ms-grid-column: 1;
   grid-area: footer;
   background-color: black;
+  color: white;
+}
+
+.footer_link {
+  color: white;
+}
+
+.footer_link:hover {
+  color: white;
+}
+
+.footer_link:active {
+  color: white;
+}
+
+.footer_link:visited {
+  color: white;
 }
 /*# sourceMappingURL=style.css.map */
