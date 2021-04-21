@@ -1,0 +1,90 @@
+body {
+  margin: 0%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 0.5fr 1fr 1fr 3fr;
+      grid-template-rows: 0.5fr 1fr 1fr 3fr;
+      grid-template-areas: "header"  "localisation" "introduction" "fonctionnement" "restaurants" "footer";
+}
+
+header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: header;
+}
+
+#localisation {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: localisation;
+  background-color: grey;
+}
+
+#introduction {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: introduction;
+}
+
+#fonctionnement {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: fonctionnement;
+}
+
+#restaurants {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  grid-area: restaurants;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: grey;
+}
+
+.restaurants_box {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr 1fr 1fr;
+      grid-template-columns: 2fr 1fr 1fr;
+  -ms-grid-rows: 2fr 1fr;
+      grid-template-rows: 2fr 1fr;
+      grid-template-areas: "image . ." "texte . like";
+}
+
+.restaurants_image {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: image;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-column: 1 /span 3;
+  width: 300px;
+  height: 150px;
+}
+
+.restaurants_texte {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: texte;
+}
+
+.restaurants_like {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: like;
+}
+
+footer {
+  -ms-grid-row: 6;
+  -ms-grid-column: 1;
+  grid-area: footer;
+  background-color: black;
+}
+/*# sourceMappingURL=style.css.map */

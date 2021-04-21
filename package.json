@@ -1,0 +1,19 @@
+{
+  "name": "rivronfrederic_p3_20042021",
+  "version": "1.0.0",
+  "description": "RIVRONFrederic_p3_20042021",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/style.scss:./style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ticureuil/RIVRONFrederic_p3_20042021.git"
+  },
+  "author": "Frederic",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ticureuil/RIVRONFrederic_p3_20042021/issues"
+  },
+  "homepage": "https://github.com/ticureuil/RIVRONFrederic_p3_20042021#readme"
+}
