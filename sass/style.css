@@ -13,6 +13,16 @@ header {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: header;
+  -ms-flex-item-align: center;
+      align-self: center;
+  justify-self: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 80%;
 }
 
 #localisation {
@@ -47,10 +57,22 @@ header {
           align-items: center;
 }
 
+.introduction_bouton {
+  color: white;
+  font-size: 20px;
+  border-radius: 30px;
+  background-color: pink;
+  width: 30%;
+  height: 60px;
+}
+
 #fonctionnement {
   -ms-grid-row: 4;
   -ms-grid-column: 1;
   grid-area: fonctionnement;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -68,12 +90,9 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
   background-color: #fdc1fd;
-  border: solid 1px black;
-  border-radius: 10px;
+  border-radius: 20px;
+  width: 70%;
 }
 
 #restaurants {

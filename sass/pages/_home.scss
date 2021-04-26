@@ -13,6 +13,12 @@ body{
 }
     header{
         grid-area: header;
+        align-self: center;
+        justify-self: center;
+
+        display: flex;
+        justify-content: center;
+        width: 80%;
     }
 
     #localisation{
@@ -33,8 +39,14 @@ body{
 
     }
 
+        .introduction_bouton{
+            @include bouton
+        }
+
     #fonctionnement{
         grid-area: fonctionnement;
+
+        align-items: center;
 
         display: flex;
         flex-direction: column;
@@ -44,10 +56,11 @@ body{
         .fonctionnement_box{
             display: flex;
             align-items: center;
-            justify-content: space-evenly;
+            
+
             background-color: rgb(253, 193, 253);
-            border: solid 1px black;
-            border-radius: 10px;
+            border-radius: 20px;
+            width: 70%;
         }
 
 
