@@ -5,9 +5,8 @@ body {
   display: grid;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-  -ms-grid-rows: 0.5fr 1fr 1fr 3fr;
-      grid-template-rows: 0.5fr 1fr 1fr 3fr;
       grid-template-areas: "header"  "localisation" "introduction" "fonctionnement" "restaurants" "footer";
+  row-gap: 40px;
 }
 
 header {
@@ -71,52 +70,83 @@ header {
   -ms-grid-row: 4;
   -ms-grid-column: 1;
   grid-area: fonctionnement;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 5% 90% 5%;
+      grid-template-columns: 5% 90% 5%;
+      grid-template-areas: ". fonctionnement_titre ." ". fonctionnement_box_1 ." ". fonctionnement_box_2 ." ". fonctionnement_box_3 .";
   row-gap: 20px;
 }
 
+.fonctionnement_titre {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: fonctionnement_titre;
+}
+
 .fonctionnement_box {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 10% 10% 70% 10%;
+      grid-template-columns: 10% 10% 70% 10%;
+      grid-template-areas: "fonctionnement_box_numero fonctionnement_box_icon fonctionnement_box_titre .";
   background-color: #fdc1fd;
   border-radius: 20px;
-  width: 70%;
+  width: 100%;
+}
+
+.fonctionnement_box_1 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: fonctionnement_box_1;
+}
+
+.fonctionnement_box_2 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: fonctionnement_box_2;
+}
+
+.fonctionnement_box_3 {
+  -ms-grid-row: 4;
+  -ms-grid-column: 2;
+  grid-area: fonctionnement_box_3;
+}
+
+.fonctionnement_box_titre {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: fonctionnement_box_titre;
 }
 
 #restaurants {
   -ms-grid-row: 5;
   -ms-grid-column: 1;
   grid-area: restaurants;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  padding-top: 10%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 5% 100% 5%;
+      grid-template-columns: 5% 100% 5%;
+  -ms-grid-rows: 0.3fr 1fr 1fr 1fr 1fr;
+      grid-template-rows: 0.3fr 1fr 1fr 1fr 1fr;
+      grid-template-areas: ". restaurants_titre ." ". restaurants_box_1 ." ". restaurants_box_2 ." ". restaurants_box_3 ." ". restaurants_box_4 .";
   background-color: grey;
 }
 
 .restaurants_titre {
-  -webkit-margin-start: 5%;
-          margin-inline-start: 5%;
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: restaurants_titre;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .restaurants_box {
+  grid-area: box;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -124,14 +154,36 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -ms-flex-item-align: center;
-      align-self: center;
   background-color: white;
   border-radius: 30px;
   width: 90%;
   -webkit-margin-after: 5%;
           margin-block-end: 5%;
   overflow: hidden;
+}
+
+.restaurants_box_1 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: restaurants_box_1;
+}
+
+.restaurants_box_2 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: restaurants_box_2;
+}
+
+.restaurants_box_3 {
+  -ms-grid-row: 4;
+  -ms-grid-column: 2;
+  grid-area: restaurants_box_3;
+}
+
+.restaurants_box_4 {
+  -ms-grid-row: 5;
+  -ms-grid-column: 2;
+  grid-area: restaurants_box_4;
 }
 
 .restaurants_image {
@@ -149,14 +201,27 @@ header {
   height: 1000px;
 }
 
-.restaurants_texte {
-  -webkit-margin-start: 5%;
-          margin-inline-start: 5%;
-  grid-area: texte;
+.restaurants_box_texte {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0% 10% 0% 10%;
 }
 
 .restaurants_like {
-  grid-area: like;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 footer {
