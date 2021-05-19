@@ -1,0 +1,36 @@
+.image{
+    width: 100%;
+}
+
+#body{
+    border-radius: 55px;
+    background-color: grey;
+}
+
+.titre{
+    @include menu_titre
+}
+
+.entrées{
+    @include box_menu
+}
+
+.box_commandes{
+    @include box_commandes
+}
+
+.box_commandes_titre{
+    @include box_commandes_titre
+}
+
+.plats{
+    @include box_menu
+}
+
+.desserts{
+    @include box_menu
+}
+
+.bouton{
+    @include bouton;
+}
