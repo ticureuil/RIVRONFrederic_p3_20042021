@@ -5,6 +5,10 @@
     background-color: pink;
     width: 30%;
     height: 60px;
+
+    display: flex;
+    align-self: center;
+    justify-content: center;
 }
 
 @mixin menu_titre {

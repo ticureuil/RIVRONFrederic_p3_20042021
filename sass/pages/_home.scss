@@ -1,3 +1,6 @@
+
+
+
 body{
     margin: 0%;
     display: grid;
@@ -148,6 +151,13 @@ body{
             }
 
 
+
+            .restaurants_box_link, .restaurants_box_link:active, .restaurants_box_link:link, .restaurants_box_link:visited{
+                    color: black;
+                    text-decoration: none;
+            }
+
+
         
             .restaurants_image{
                 border-top-left-radius: 30px;
@@ -195,16 +205,20 @@ footer{
 
 .footer_link{
     color: $color-white;
+    text-decoration: none;
 
         &:hover{
-            color: $color-white
+            color: $color-white;
+            text-decoration: none;
         }
 
         &:active{
-            color: $color-white
+            color: $color-white;
+            text-decoration: none;
         }
         &:visited{
-            color: $color-white
+            color: $color-white;
+            text-decoration: none;
         }
 }
 
