@@ -561,6 +561,7 @@ h3 {
 }
 
 #body {
+  border: 0px;
   border-top-left-radius: 55px;
   border-top-right-radius: 55px;
   background-color: grey;
@@ -576,6 +577,16 @@ h3 {
           justify-content: space-between;
   margin-left: 3%;
   margin-right: 5%;
+}
+
+.titre_icon {
+  font-size: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .entrées {
