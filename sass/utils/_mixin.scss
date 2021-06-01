@@ -1,30 +1,43 @@
 @mixin bouton {
     color: white;
-    font-size: 20px;
+    font-size: 35px;
     border-radius: 30px;
     background-color: pink;
-    width: 30%;
-    height: 60px;
+    width: 45%;
+    height: 120px;
 
     display: flex;
     align-self: center;
     justify-content: center;
 }
 
+@mixin bouton_commandes_menu {
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
 @mixin menu_titre {
     display: flex;
     justify-content: space-between;
-    margin: 0 5% 0 5%;
+    margin-left: 3%;
+    margin-right: 5%;
 }
+
 
 @mixin box_commandes {
     background-color: red;
     border: blue solid;
     border-radius: 40px;
     width: 95%;
+    padding-left: 3%;
     display: flex;
-    justify-content: space-between;
+
+        &:hover{
+            width: 80%;
+            background-color: blue;
+        }
 }
+
 
 @mixin box_menu {
     display: flex;
@@ -38,4 +51,16 @@
     align-self: start;
     margin-left: 3%;
 }
+
+@mixin box_commandes_texte_titre {
+    font-size: 55px;   
+    margin-top: 5%; 
+    margin-bottom: 0%;
+}
+
+@mixin box_commandes_texte_description {
+    font-size: 40px;
+    margin-top: 5%;
+}
+
 

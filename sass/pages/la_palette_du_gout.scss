@@ -1,37 +1,114 @@
+h2{
+    font-size: 35px;
+}
+
+h3{
+    font-size: 55px;
+}
+
+#header{
+    display: grid;
+    grid-template-columns: 10% 15% 50% 25%;
+    grid-template-areas: 
+    ". header_icon header_image .";
+}
+
+.header_icon, .header_icon:visited, .header_icon:active, .header_icon:hover{
+    
+    grid-area: header_icon;
+    
+    font-size: 45px;
+    align-self: center;
+}
+.header_image{
+    grid-area: header_image;
+}
+
+
 .image{
     width: 100%;
 }
 
 #body{
-    border-radius: 55px;
+    border-top-left-radius: 55px;
+    border-top-right-radius: 55px;
     background-color: grey;
     margin-top: -140px;
 }
 
 .titre{
-    @include menu_titre
+    @include menu_titre;
 }
 
+    .titre_icon{
+        font-size: 60px;
+        display: flex;
+        align-items: center;
+    }
+
 .entrées{
-    @include box_menu
+    @include box_menu;
 }
 
 .box_commandes{
-    @include box_commandes
+    @include box_commandes;
 }
+
 
 .box_commandes_titre{
-    @include box_commandes_titre
+    @include box_commandes_titre;
 }
 
+.box_commandes_texte{
+    padding-right: 15%;
+}
+
+.box_commandes_texte_titre{
+    @include box_commandes_texte_titre;
+}
+
+.box_commandes_texte_description{
+    @include box_commandes_texte_description;
+}
+
+
 .plats{
-    @include box_menu
+    @include box_menu;
 }
 
 .desserts{
-    @include box_menu
+    @include box_menu;
 }
 
 .bouton{
     @include bouton;
+}
+
+.bouton_commandes_menu{
+    @include bouton_commandes_menu;
+}
+
+.footer_titre{
+    font-style: italic;
+}
+
+.footer_link{
+    display: flex;
+    flex-direction: row;
+    column-gap: 3%;
+}
+
+.footer_texte{
+    font-size: 40px;
+    margin-top: 0%;
+}
+
+.footer_icon, .footer_icon:active, .footer_icon:hover, .footer_icon:visited{
+    font-size: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.footer_icon_hands , .footer_icon_hands:active, .footer_icon_hands:hover, .footer_icon_hands:visited{
+    font-size: 40px;
 }

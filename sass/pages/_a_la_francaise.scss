@@ -35,6 +35,33 @@
     @include box_menu
 }
 
-.bouton{
-    @include bouton;
+
+.bouton_commandes{
+    @include bouton
+}
+
+
+.footer_titre{
+    font-style: italic;
+}
+
+.footer_link{
+    display: flex;
+    flex-direction: row;
+    column-gap: 3%;
+}
+
+.footer_texte{
+    font-size: 40px;
+    margin-top: 0%;
+}
+
+.footer_icon, .footer_icon:active, .footer_icon:hover, .footer_icon:visited{
+    font-size: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.footer_icon_hands , .footer_icon_hands:active, .footer_icon_hands:hover, .footer_icon_hands:visited{
+    font-size: 40px;
 }

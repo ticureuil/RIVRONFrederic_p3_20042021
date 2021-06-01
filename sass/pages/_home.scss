@@ -1,4 +1,6 @@
-
+h1{
+    font-size: 60px;
+}
 
 
 body{
@@ -12,7 +14,6 @@ body{
     "fonctionnement"
     "restaurants"
     "footer";
-    row-gap: 40px;
 }
     header{
         grid-area: header;
@@ -22,6 +23,8 @@ body{
         display: flex;
         justify-content: center;
         width: 80%;
+        padding-top: 5%;
+        padding-bottom: 3%;
     }
 
     #localisation{
@@ -31,7 +34,17 @@ body{
         display: flex;
         align-items: center;
         justify-content: center;
+
+        column-gap: 5%;
     }
+
+        .localisation_texte{
+            font-size: 45px;
+        }
+
+        .localisation_icon{
+            font-size: 45px;
+        }
 
     #introduction{
         grid-area: introduction;
@@ -39,8 +52,26 @@ body{
         display: flex;
         flex-direction: column;
         align-items: center;
+        padding-bottom: 10%;
+        padding-top: 5%;
+        background-color: lightgrey;
 
     }
+
+        .introduction_titre{
+            display: flex;
+            text-align: center;
+            padding-right: 10%;
+            padding-left: 10%;
+            font-size: 75px;
+            margin-bottom: 0px;
+        }
+
+        .introduction_description{
+            display: flex;
+            text-align: center;
+            font-size: 50px;
+        }
 
         .introduction_bouton{
             @include bouton
@@ -57,23 +88,28 @@ body{
         ". fonctionnement_box_2 ."
         ". fonctionnement_box_3 .";
 
-        row-gap: 20px;
+        row-gap: 35px;
+
+        padding-top: 5%;
+        padding-bottom: 10%;
     }
 
         .fonctionnement_titre{
             grid-area: fonctionnement_titre;
+            
+            font-size: 30px;
         }
 
 
         .fonctionnement_box{
             display: grid;
-            grid-template-columns: 10% 10% 70% 10%;
+            grid-template-columns: 8% 10% 75% 7%;
             grid-template-areas: 
-            "fonctionnement_box_numero fonctionnement_box_icon fonctionnement_box_titre .";
+            "fonctionnement_box_numero fonctionnement_box_icon fonctionnement_box_titre";
             
 
             background-color: rgb(253, 193, 253);
-            border-radius: 20px;
+            border-radius: 30px;
             width: 100%;
         }
 
@@ -91,6 +127,19 @@ body{
 
             .fonctionnement_box_titre{
                 grid-area: fonctionnement_box_titre;
+                font-size: 45px;
+                display: flex;
+                align-self: center;
+                justify-self: center;
+            }
+
+            .fonctionnement_box_icon{
+                grid-area: fonctionnement_box_icon;
+                font-size: 45px;
+                
+                display: flex;
+                align-self: center;
+                justify-self: center;
             }
 
 
@@ -99,7 +148,7 @@ body{
         grid-area: restaurants;
 
         display: grid;
-        grid-template-columns: 5% 100% 5%;
+        grid-template-columns: 5% 90% 5%;
         grid-template-rows: 0.3fr 1fr 1fr 1fr 1fr;
         grid-template-areas: 
         ". restaurants_titre ."
@@ -109,6 +158,8 @@ body{
         ". restaurants_box_4 .";
 
         background-color: $background-body;
+        padding-top: 5%;
+        padding-bottom: 10%;
     }
 
         .restaurants_titre{
@@ -127,7 +178,7 @@ body{
 
             background-color: white;
             border-radius: 30px;
-            width: 90%;
+            width: 100%;
             margin-block-end: 5%;
 
             overflow: hidden;
@@ -178,17 +229,28 @@ body{
                 display: flex;
                 flex-direction: row;
                 justify-content: space-between;
-                margin: 0% 10% 0% 10%;
+                margin-left: 3%;
             }
 
-                .restaurants_texte{
-                
+                .restaurants_texte_titre{
+                    font-size: 45px;
+                    margin-bottom: 5%;
+                }
+
+                .restaurants_texte_lieu{
+                    font-size: 40px;
+                    margin-top: 0px;
                 }
 
                 .restaurants_like{
+
+                    margin-right: 10%;
+                    font-size: 70px;
                     display: flex;
                     align-items: center;
                 }
+
+
 
 
         
@@ -222,3 +284,27 @@ footer{
         }
 }
 
+.footer_titre{
+    font-style: italic;
+}
+
+.footer_link{
+    display: flex;
+    flex-direction: row;
+    column-gap: 3%;
+}
+
+.footer_texte{
+    font-size: 40px;
+    margin-top: 0%;
+}
+
+.footer_icon, .footer_icon:active, .footer_icon:hover, .footer_icon:visited{
+    font-size: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.footer_icon_hands , .footer_icon_hands:active, .footer_icon_hands:hover, .footer_icon_hands:visited{
+    font-size: 40px;
+}
