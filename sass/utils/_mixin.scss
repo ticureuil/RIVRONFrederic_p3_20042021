@@ -18,8 +18,8 @@
 @mixin bouton {
     color: white;
     font-size: 35px;
-    border-radius: 30px;
-    background-color: pink;
+    border-radius: 60px;
+    background: linear-gradient(to top left,#9356DC, #FF79DA);
     width: 45%;
     height: 120px;
 
@@ -31,6 +31,7 @@
 @mixin bouton_commandes_menu {
     margin-top: 5%;
     margin-bottom: 5%;
+    margin-left: 25%;
 }
 
 
@@ -39,6 +40,8 @@
 @mixin header {
     text-decoration: none;
     color: black;
+    padding-top: 5%;
+    padding-bottom: 3%;
     display: grid;
     grid-template-columns: 10% 15% 50% 25%;
     grid-template-areas: 
@@ -65,7 +68,7 @@
     border: 0px;
     border-top-left-radius: 55px;
     border-top-right-radius: 55px;
-    background-color: grey;
+    background-color: #F6F6F6;
     margin-top: -140px;
 }    
 
@@ -74,6 +77,7 @@
         justify-content: space-between;
         margin-left: 3%;
         margin-right: 5%;
+        font-style: italic;
     }
 
     @mixin titre_icon {
@@ -89,9 +93,8 @@
 
 @mixin box_commandes {
     background-color: white;
-    border: black solid;
     border-radius: 40px;
-    width: 95%;
+    width: 90%;
     padding-left: 3%;
     display: flex;
     animation: box_animation 2s;
@@ -109,7 +112,7 @@
 
 @mixin box_commandes_titre {
     align-self: start;
-    margin-left: 3%;
+    margin-left: 5%;
 }
 
 @mixin box_commandes_texte_titre {
@@ -120,7 +123,7 @@
 
 @mixin box_commandes_texte_description {
     font-size: 40px;
-    margin-top: 5%;
+    margin-top: 2%;
 }
 
 @mixin box_commandes_texte{
@@ -129,11 +132,13 @@
 
 @mixin box_commandes_prix {
     width: 10%;
+    align-self: flex-end;
 }
 
     @mixin box_commandes_prix_position {
         display: flex;
         align-self: flex-end;
+        margin-bottom: 30%;
     }
 
 
