@@ -6,46 +6,33 @@ h3{
     font-size: 55px;
 }
 
-#header{
-    display: grid;
-    grid-template-columns: 10% 15% 50% 25%;
-    grid-template-areas: 
-    ". header_icon header_image .";
+#header , #header:active, #header:visited{
+    @include header;
 }
 
-.header_icon, .header_icon:visited, .header_icon:active, .header_icon:hover{
-    
-    grid-area: header_icon;
-    
-    font-size: 45px;
-    align-self: center;
-}
-.header_image{
-    grid-area: header_image;
-}
+    .header_icon, .header_icon:visited, .header_icon:active, .header_icon:hover{ 
+        @include header_icon;
+    }
 
+    .header_image{
+        @include header_image;
+    }
 
 .image{
     width: 100%;
 }
 
 #body{
-    border: 0px;
-    border-top-left-radius: 55px;
-    border-top-right-radius: 55px;
-    background-color: grey;
-    margin-top: -140px;
+    @include body;  
 }
 
-.titre{
-    @include menu_titre;
-}
-
-    .titre_icon{
-        font-size: 60px;
-        display: flex;
-        align-items: center;
+    .titre {
+        @include titre;
     }
+
+        .titre_icon ,.titre_icon:hover , .titre_icon:active{
+            @include titre_icon;
+        }
 
 .entrées{
     @include box_menu;
@@ -61,7 +48,15 @@ h3{
 }
 
 .box_commandes_texte{
-    padding-right: 15%;
+    @include box_commandes_texte;
+}
+
+.box_commandes_prix{
+    @include box_commandes_prix;
+}
+
+.box_commandes_prix_position{
+    @include box_commandes_prix_position;
 }
 
 .box_commandes_texte_titre{
@@ -81,7 +76,7 @@ h3{
     @include box_menu;
 }
 
-.bouton{
+.bouton_commandes{
     @include bouton;
 }
 

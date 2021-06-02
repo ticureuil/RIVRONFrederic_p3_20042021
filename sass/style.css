@@ -1,4 +1,32 @@
 @charset "UTF-8";
+/* Animations */
+@-webkit-keyframes box_animation {
+  from {
+    -webkit-transform: translatey(15%);
+            transform: translatey(15%);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translatey(0%);
+            transform: translatey(0%);
+    opacity: 1;
+  }
+}
+@keyframes box_animation {
+  from {
+    -webkit-transform: translatey(15%);
+            transform: translatey(15%);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translatey(0%);
+            transform: translatey(0%);
+    opacity: 1;
+  }
+}
+
+/* Utilisation Générale */
+/* Utilisation pour les pages de restaurants */
 h1 {
   font-size: 60px;
 }
@@ -376,21 +404,53 @@ footer {
   font-size: 40px;
 }
 
+h2 {
+  font-size: 35px;
+}
+
+h3 {
+  font-size: 55px;
+}
+
+#header, #header:active, #header:visited {
+  text-decoration: none;
+  color: black;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 10% 15% 50% 25%;
+      grid-template-columns: 10% 15% 50% 25%;
+      grid-template-areas: ". header_icon header_image .";
+}
+
+.header_icon, .header_icon:visited, .header_icon:active, .header_icon:hover {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: header_icon;
+  font-size: 45px;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+.header_image {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: header_image;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-self: center;
+}
+
 .image {
   width: 100%;
 }
 
 #body {
-  border-radius: 55px;
+  border: 0px;
+  border-top-left-radius: 55px;
+  border-top-right-radius: 55px;
   background-color: grey;
   margin-top: -140px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
 }
 
 .titre {
@@ -402,6 +462,18 @@ footer {
           justify-content: space-between;
   margin-left: 3%;
   margin-right: 5%;
+}
+
+.titre_icon, .titre_icon:hover, .titre_icon:active {
+  font-size: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-item-align: center;
+      align-self: center;
 }
 
 .entrées {
@@ -420,19 +492,16 @@ footer {
 }
 
 .box_commandes {
-  background-color: red;
-  border: blue solid;
+  background-color: white;
+  border: black solid;
   border-radius: 40px;
   width: 95%;
   padding-left: 3%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-
-.box_commandes:hover {
-  width: 80%;
-  background-color: blue;
+  -webkit-animation: box_animation 2s;
+          animation: box_animation 2s;
 }
 
 .box_commandes_titre {
@@ -440,6 +509,33 @@ footer {
       -ms-grid-row-align: start;
       align-self: start;
   margin-left: 3%;
+}
+
+.box_commandes_texte {
+  width: 90%;
+}
+
+.box_commandes_prix {
+  width: 10%;
+}
+
+.box_commandes_prix_position {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.box_commandes_texte_titre {
+  font-size: 55px;
+  margin-top: 5%;
+  margin-bottom: 0%;
+}
+
+.box_commandes_texte_description {
+  font-size: 40px;
+  margin-top: 5%;
 }
 
 .plats {
@@ -489,6 +585,11 @@ footer {
           justify-content: center;
 }
 
+.bouton_commandes_menu {
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
 .footer_titre {
   font-style: italic;
 }
@@ -532,7 +633,9 @@ h3 {
   font-size: 55px;
 }
 
-#header {
+#header, #header:active, #header:visited {
+  text-decoration: none;
+  color: black;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 10% 15% 50% 25%;
@@ -554,6 +657,10 @@ h3 {
   -ms-grid-row: 1;
   -ms-grid-column: 3;
   grid-area: header_image;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-self: center;
 }
 
 .image {
@@ -579,7 +686,7 @@ h3 {
   margin-right: 5%;
 }
 
-.titre_icon {
+.titre_icon, .titre_icon:hover, .titre_icon:active {
   font-size: 60px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -587,6 +694,8 @@ h3 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-item-align: center;
+      align-self: center;
 }
 
 .entrées {
@@ -605,19 +714,16 @@ h3 {
 }
 
 .box_commandes {
-  background-color: red;
-  border: blue solid;
+  background-color: white;
+  border: black solid;
   border-radius: 40px;
   width: 95%;
   padding-left: 3%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-
-.box_commandes:hover {
-  width: 80%;
-  background-color: blue;
+  -webkit-animation: box_animation 2s;
+          animation: box_animation 2s;
 }
 
 .box_commandes_titre {
@@ -628,7 +734,19 @@ h3 {
 }
 
 .box_commandes_texte {
-  padding-right: 15%;
+  width: 90%;
+}
+
+.box_commandes_prix {
+  width: 10%;
+}
+
+.box_commandes_prix_position {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
 }
 
 .box_commandes_texte_titre {
@@ -672,7 +790,7 @@ h3 {
   padding-top: 5%;
 }
 
-.bouton {
+.bouton_commandes {
   color: white;
   font-size: 35px;
   border-radius: 30px;

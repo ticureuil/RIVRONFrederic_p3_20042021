@@ -1,3 +1,20 @@
+/* Animations */
+
+@keyframes box_animation {
+        from{
+            transform: translatey(15%);
+            opacity: 0;
+        }
+        to{
+            transform: translatey(0%);
+            opacity: 1;
+        }
+}
+
+
+
+/* Utilisation Générale */
+
 @mixin bouton {
     color: white;
     font-size: 35px;
@@ -16,26 +33,69 @@
     margin-bottom: 5%;
 }
 
-@mixin menu_titre {
-    display: flex;
-    justify-content: space-between;
-    margin-left: 3%;
-    margin-right: 5%;
+
+/* Utilisation pour les pages de restaurants */
+
+@mixin header {
+    text-decoration: none;
+    color: black;
+    display: grid;
+    grid-template-columns: 10% 15% 50% 25%;
+    grid-template-areas: 
+    ". header_icon header_image .";
 }
+
+    @mixin header_icon {
+        grid-area: header_icon;
+        
+        font-size: 45px;
+        align-self: center;
+    }
+
+    @mixin header_image {
+        grid-area: header_image;
+
+        display: flex;
+        justify-self: center;
+    }
+
+
+
+@mixin body {
+    border: 0px;
+    border-top-left-radius: 55px;
+    border-top-right-radius: 55px;
+    background-color: grey;
+    margin-top: -140px;
+}    
+
+    @mixin titre {
+        display: flex;
+        justify-content: space-between;
+        margin-left: 3%;
+        margin-right: 5%;
+    }
+
+    @mixin titre_icon {
+        font-size: 60px;
+        display: flex;
+        align-items: center;
+        align-self: center;
+    }
+
+
+
 
 
 @mixin box_commandes {
-    background-color: red;
-    border: blue solid;
+    background-color: white;
+    border: black solid;
     border-radius: 40px;
     width: 95%;
     padding-left: 3%;
     display: flex;
+    animation: box_animation 2s;
 
-        &:hover{
-            width: 80%;
-            background-color: blue;
-        }
 }
 
 
@@ -62,5 +122,18 @@
     font-size: 40px;
     margin-top: 5%;
 }
+
+@mixin box_commandes_texte{
+    width: 90%;
+}
+
+@mixin box_commandes_prix {
+    width: 10%;
+}
+
+    @mixin box_commandes_prix_position {
+        display: flex;
+        align-self: flex-end;
+    }
 
 
