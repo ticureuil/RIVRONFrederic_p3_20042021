@@ -13,13 +13,14 @@
 
 
 
+
 /* Utilisation Générale */
 
 @mixin bouton {
     color: white;
     font-size: 35px;
     border-radius: 60px;
-    background: linear-gradient(to top left,#9356DC, #FF79DA);
+    background: linear-gradient(#FF79DA, #9356DC);
     width: 45%;
     height: 120px;
 
@@ -37,7 +38,7 @@
 
 /* Utilisation pour les pages de restaurants */
 
-@mixin header {
+@mixin home {
     text-decoration: none;
     color: black;
     padding-top: 5%;
@@ -96,9 +97,19 @@
     border-radius: 40px;
     width: 90%;
     padding-left: 3%;
-    display: flex;
+
+
+        display: grid;
+        grid-template-columns: 90% 10% 0%;
+        grid-template-areas: 
+        "box_commandes_texte_1 box_commandes_prix_1 box_commandes_check_1";
+
     animation: box_animation 2s;
 
+
+        &:hover, &:active{
+            grid-template-columns: 70% 10% 20%;
+        }
 }
 
 
@@ -108,6 +119,7 @@
     align-items: center;
     row-gap: 15px;
     padding-top: 5%;
+
 }
 
 @mixin box_commandes_titre {
@@ -126,12 +138,32 @@
     margin-top: 2%;
 }
 
+@mixin box_commandes_check {
+    grid-area: box_commandes_check_1;
+    background-color: green;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    display: flex;
+    align-items: center;
+    place-content: center;
+
+}
+
+
+@mixin box_commandes_check_icon {
+    font-size: 70px;
+}
+
 @mixin box_commandes_texte{
     width: 90%;
 }
 
+    @mixin box_commandes_texte_1 {
+        grid-area: box_commandes_texte_1;
+    }
+
 @mixin box_commandes_prix {
-    width: 10%;
+    width: 100%;
     align-self: flex-end;
 }
 
@@ -141,4 +173,14 @@
         margin-bottom: 30%;
     }
 
+
+        @mixin box_commandes_prix_1 {
+            grid-area: box_commandes_prix_1;
+        }
+
+
+@mixin box_commandes_check_1 {
+    grid-area: box_commandes_check_1;
+
+}
 

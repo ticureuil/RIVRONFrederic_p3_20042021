@@ -7,7 +7,7 @@ h3{
 }
 
 #header , #header:active, #header:visited{
-    @include header;
+    @include home;
 }
 
     .header_icon, .header_icon:visited, .header_icon:active, .header_icon:hover{ 

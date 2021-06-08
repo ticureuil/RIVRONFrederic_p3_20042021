@@ -1,3 +1,7 @@
+h1{
+    width: 80%;
+}
+
 h2{
     font-size: 35px;
 }
@@ -7,7 +11,7 @@ h3{
 }
 
 #header , #header:active, #header:visited{
-    @include header;
+    @include home;
 }
 
     .header_icon, .header_icon:visited, .header_icon:active, .header_icon:hover{ 
@@ -38,35 +42,58 @@ h3{
     @include box_menu;
 }
 
-.box_commandes{
-    @include box_commandes;
-}
+    .box_commandes{
+        @include box_commandes;
+    }
 
 
-.box_commandes_titre{
-    @include box_commandes_titre;
-}
 
-.box_commandes_texte{
-    @include box_commandes_texte;
-}
 
-.box_commandes_prix{
-    @include box_commandes_prix;
-}
 
-.box_commandes_prix_position{
-    @include box_commandes_prix_position;
-}
+    .box_commandes_titre{
+        @include box_commandes_titre;
+    }
 
-.box_commandes_texte_titre{
-    @include box_commandes_texte_titre;
-}
+    .box_commandes_texte{
+        @include box_commandes_texte;
+    }
 
-.box_commandes_texte_description{
-    @include box_commandes_texte_description;
-}
+        .box_commandes_texte_1{
+            @include box_commandes_texte_1;
+        }
 
+    .box_commandes_prix{
+        @include box_commandes_prix;
+    }
+
+        .box_commandes_prix_1{
+            @include box_commandes_prix_1;
+        }
+
+    .box_commandes_prix_position{
+        @include box_commandes_prix_position;
+    }
+
+    .box_commandes_texte_titre{
+        @include box_commandes_texte_titre;
+    }
+
+    .box_commandes_texte_description{
+        @include box_commandes_texte_description;
+    }
+
+    .box_commandes_check{
+        @include box_commandes_check;
+    }
+
+
+        .box_commandes_check_1{
+            @include box_commandes_check_1;
+        }
+
+    .box_commandes_check_icon{
+        @include box_commandes_check_icon;
+    }
 
 .plats{
     @include box_menu;
