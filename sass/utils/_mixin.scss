@@ -11,6 +11,20 @@
         }
 }
 
+@keyframes box_hover {
+    from{
+        grid-template-columns: 90% 10% 0%;
+    }
+
+    to{
+        grid-template-columns: 70% 10% 20%;
+    }
+}
+
+
+
+
+
 
 
 
@@ -98,17 +112,16 @@
     width: 90%;
     padding-left: 3%;
 
-
         display: grid;
         grid-template-columns: 90% 10% 0%;
         grid-template-areas: 
         "box_commandes_texte_1 box_commandes_prix_1 box_commandes_check_1";
 
-    animation: box_animation 2s;
+        animation: box_animation 2s;
 
 
         &:hover, &:active{
-            grid-template-columns: 70% 10% 20%;
+            animation:0.5s box_hover;
         }
 }
 
@@ -140,9 +153,10 @@
 
 @mixin box_commandes_check {
     grid-area: box_commandes_check_1;
-    background-color: green;
+    background-color: #99E2D0;
     border-top-right-radius: 40px;
     border-bottom-right-radius: 40px;
+    overflow: hidden;
     display: flex;
     align-items: center;
     place-content: center;
@@ -152,6 +166,7 @@
 
 @mixin box_commandes_check_icon {
     font-size: 70px;
+    
 }
 
 @mixin box_commandes_texte{

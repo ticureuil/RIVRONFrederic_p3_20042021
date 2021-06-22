@@ -25,6 +25,26 @@
   }
 }
 
+@-webkit-keyframes box_hover {
+  from {
+    grid-template-columns: 90% 10% 0%;
+  }
+  to {
+    grid-template-columns: 70% 10% 20%;
+  }
+}
+
+@keyframes box_hover {
+  from {
+    -ms-grid-columns: 90% 10% 0%;
+        grid-template-columns: 90% 10% 0%;
+  }
+  to {
+    -ms-grid-columns: 70% 10% 20%;
+        grid-template-columns: 70% 10% 20%;
+  }
+}
+
 /* Utilisation Générale */
 /* Utilisation pour les pages de restaurants */
 h1 {
@@ -510,8 +530,8 @@ h3 {
 }
 
 .box_commandes:hover, .box_commandes:active {
-  -ms-grid-columns: 70% 10% 20%;
-      grid-template-columns: 70% 10% 20%;
+  -webkit-animation: 0.5s box_hover;
+          animation: 0.5s box_hover;
 }
 
 .box_commandes_titre {
@@ -749,8 +769,8 @@ h3 {
 }
 
 .box_commandes:hover, .box_commandes:active {
-  -ms-grid-columns: 70% 10% 20%;
-      grid-template-columns: 70% 10% 20%;
+  -webkit-animation: 0.5s box_hover;
+          animation: 0.5s box_hover;
 }
 
 .box_commandes_titre {
@@ -806,9 +826,10 @@ h3 {
   -ms-grid-row: 1;
   -ms-grid-column: 3;
   grid-area: box_commandes_check_1;
-  background-color: green;
+  background-color: #99E2D0;
   border-top-right-radius: 40px;
   border-bottom-right-radius: 40px;
+  overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1022,8 +1043,8 @@ h3 {
 }
 
 .box_commandes:hover, .box_commandes:active {
-  -ms-grid-columns: 70% 10% 20%;
-      grid-template-columns: 70% 10% 20%;
+  -webkit-animation: 0.5s box_hover;
+          animation: 0.5s box_hover;
 }
 
 .box_commandes_titre {
@@ -1258,8 +1279,8 @@ h3 {
 }
 
 .box_commandes:hover, .box_commandes:active {
-  -ms-grid-columns: 70% 10% 20%;
-      grid-template-columns: 70% 10% 20%;
+  -webkit-animation: 0.5s box_hover;
+          animation: 0.5s box_hover;
 }
 
 .box_commandes_titre {
